@@ -1,0 +1,20 @@
+data-file sector-size (in bytes) = 4  
+	/* could be anything less than the size of the file */
+
+no. of sectors per block = 500 
+	/* could be anything less than total no. of sectors in the file which is filesize / sector-size */
+	
+size of 'p' (and all elements of Zp*) (in bits) = 1024
+
+size of 'q' (and all elements of Fq) (in bits) = 160
+
+Percentage of blocks to be challenged = 0.05
+
+debug = 0 
+	/* whether to print the messages on monitor by the programs, except the last program */
+	
+lastProgramDebug = 0 
+	/* whether to print the messages on monitor by the last program */
+	
+timeDebug = 0
+	/ * prints only the execution time of an algo. */

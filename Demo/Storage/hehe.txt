@@ -1,0 +1,133 @@
+one...
+Metadata generated for the data file /home/cherry/Downloads/Demo/Storage/15MBData.csv
+cherry@cherry-Inspiron-14-7430-2-in-1:~/Downloads/Demo/Admin-Cloud$ cd ..
+cherry@cherry-Inspiron-14-7430-2-in-1:~/Downloads/Demo$ ls
+Admin-Cloud  Auditor  Instructions.docx  Storage
+cherry@cherry-Inspiron-14-7430-2-in-1:~/Downloads/Demo$ cd Auditor/
+cherry@cherry-Inspiron-14-7430-2-in-1:~/Downloads/Demo/Auditor$ ls
+Alice.sh     Configuration.txt  Failure_msg.ogg  Params.bin  Statistics.txt
+ChalStr.txt  DataAudit          metaData.bin     POP.bin     Success_Msg.ogg
+cherry@cherry-Inspiron-14-7430-2-in-1:~/Downloads/Demo/Auditor$ ./DataAudit ChallengeGen
+cherry@cherry-Inspiron-14-7430-2-in-1:~/Downloads/Demo/Auditor$ cd..
+cd..: command not found
+cherry@cherry-Inspiron-14-7430-2-in-1:~/Downloads/Demo/Auditor$ cd ..
+cherry@cherry-Inspiron-14-7430-2-in-1:~/Downloads/Demo$ ls
+Admin-Cloud  Auditor  Instructions.docx  Storage
+cherry@cherry-Inspiron-14-7430-2-in-1:~/Downloads/Demo$ cd Storage/
+cherry@cherry-Inspiron-14-7430-2-in-1:~/Downloads/Demo/Storage$ ./DataAudit ProofGen Params.bin 15MBData.csv ChalStr.txt
+cherry@cherry-Inspiron-14-7430-2-in-1:~/Downloads/Demo/Storage$ cd ..
+cherry@cherry-Inspiron-14-7430-2-in-1:~/Downloads/Demo$ ls
+Admin-Cloud  Auditor  Instructions.docx  Storage
+cherry@cherry-Inspiron-14-7430-2-in-1:~/Downloads/Demo$ cd Auditor/
+cherry@cherry-Inspiron-14-7430-2-in-1:~/Downloads/Demo/Auditor$ ./DataAudit VerifyProof Params.bin POP.bin metaData.bin ChalStr.txt
+1
+cherry@cherry-Inspiron-14-7430-2-in-1:~/Downloads/Demo/Auditor$ ssh fogcps@172.17.15.7
+The authenticity of host '172.17.15.7 (172.17.15.7)' can't be established.
+ED25519 key fingerprint is SHA256:oxdaVR3cSp6HU5TSQTJ/Xs/w5jGwGH0z77kq0Qja/5o.
+This key is not known by any other names.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added '172.17.15.7' (ED25519) to the list of known hosts.
+fogcps@172.17.15.7's password: 
+Welcome to Ubuntu 24.04.1 LTS (GNU/Linux 6.8.0-52-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Thu Mar 27 05:50:03 PM IST 2025
+
+  System load:  0.35                Temperature:           50.0 C
+  Usage of /:   11.2% of 912.31GB   Processes:             195
+  Memory usage: 2%                  Users logged in:       0
+  Swap usage:   0%                  IPv4 address for eno1: 172.17.15.7
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+221 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+5 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+
+*** System restart required ***
+Last login: Wed Dec  4 12:03:23 2024 from 172.17.15.9
+fogcps@fogcpsserver:~$ ls
+Anita    cp         MCL2023010  PBC_time.cpp  RSI2022512  Time.txt
+a.param  Documents  Music       Pictures      snap        Videos
+c        Downloads  PBC         re            Storage
+fogcps@fogcpsserver:~$ sudo adduser hexashield
+[sudo] password for fogcps: 
+info: Adding user `hexashield' ...
+info: Selecting UID/GID from range 1000 to 59999 ...
+info: Adding new group `hexashield' (1034) ...
+info: Adding new user `hexashield' (1034) with group `hexashield (1034)' ...
+info: Creating home directory `/home/hexashield' ...
+info: Copying files from `/etc/skel' ...
+New password: 
+BAD PASSWORD: The password is shorter than 8 characters
+Retype new password: 
+Sorry, passwords do not match.
+New password: 
+BAD PASSWORD: The password fails the dictionary check - it is too simplistic/systematic
+Retype new password: 
+passwd: password updated successfully
+Changing the user information for hexashield
+Enter the new value, or press ENTER for the default
+	Full Name []: DBMS20
+	Room Number []: 5042
+	Work Phone []: 00
+	Home Phone []: 00
+	Other []: 00
+Is the information correct? [Y/n] y
+info: Adding new user `hexashield' to supplemental / extra groups `users' ...
+info: Adding user `hexashield' to group `users' ...
+fogcps@fogcpsserver:~$ exit
+logout
+Connection to 172.17.15.7 closed.
+cherry@cherry-Inspiron-14-7430-2-in-1:~/Downloads/Demo/Auditor$ ssh hexasheild@172.17.15.7
+hexasheild@172.17.15.7's password: 
+Permission denied, please try again.
+hexasheild@172.17.15.7's password: 
+Permission denied, please try again.
+hexasheild@172.17.15.7's password: 
+
+[1]+  Stopped                 ssh hexasheild@172.17.15.7
+cherry@cherry-Inspiron-14-7430-2-in-1:~/Downloads/Demo/Auditor$ ssh hexashield@172.17.15.7
+hexashield@172.17.15.7's password: 
+Welcome to Ubuntu 24.04.1 LTS (GNU/Linux 6.8.0-52-generic x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Thu Mar 27 05:53:31 PM IST 2025
+
+  System load:  0.01                Temperature:           50.0 C
+  Usage of /:   11.2% of 912.31GB   Processes:             201
+  Memory usage: 2%                  Users logged in:       0
+  Swap usage:   0%                  IPv4 address for eno1: 172.17.15.7
+
+
+Expanded Security Maintenance for Applications is not enabled.
+
+221 updates can be applied immediately.
+To see these additional updates run: apt list --upgradable
+
+5 additional security updates can be applied with ESM Apps.
+Learn more about enabling ESM Apps service at https://ubuntu.com/esm
+
+
+*** System restart required ***
+
+The programs included with the Ubuntu system are free software;
+the exact distribution terms for each program are described in the
+individual files in /usr/share/doc/*/copyright.
+
+Ubuntu comes with ABSOLUTELY NO WARRANTY, to the extent permitted by
+applicable law.
+
+hexashield@fogcpsserver:~$ ls
+hexashield@fogcpsserver:~$ 
+
