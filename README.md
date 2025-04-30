@@ -1,6 +1,6 @@
 ## 🔐 HexaShield – Decentralized File Integrity Auditor
 
-HexaShield is a secure and user-friendly platform for verifying the integrity of files stored on localized fog infrastructure, without relying on third-party auditors or full file access. Inspired by Filecoin, HexaShield enables peer-to-peer data auditing using probabilistic integrity checks and symmetric cryptography, making it ideal for non-technical users and resource-constrained edge devices.
+HexaShield is a secure and user-friendly platform for verifying the integrity of files stored on localized fog infrastructure, without relying on third-party auditors or full file access. Inspired by Filecoin, HexaShield enables peer-to-peer data auditing using probabilistic integrity checks and symmetric cryptography, making it ideal for non-technical users and resource-constrained edge devices.//below is the screenshot-
 
 ![Dashboard Screenshot](./assets/home.png)
 
