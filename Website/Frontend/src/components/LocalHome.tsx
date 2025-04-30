@@ -100,84 +100,79 @@ function LocalHome() {
     }
   };
   return (
-    <div className="min-h-screen w-full bg-slate-900 p-6 grid grid-cols-2 grid-rows-2 gap-6">
-      {/* Top Left: Communicate with Cloud */}
-      <div className="bg-slate-800 rounded-xl p-6 shadow-lg flex flex-col">
-        <h3 className="text-center text-lg font-bold mb-4">Communicate with Cloud</h3>
-        <div className="flex-1 bg-slate-700 rounded-lg p-2 overflow-y-auto">
-          {cloudMessages.length === 0 ? (
-            <div className="text-slate-400 text-4xl font-bold text-center mt-6">No messages yet</div>
-          ) : (
-            cloudMessages.map((msg, idx) => (
-              <div key={idx} className="text-3xl font-bold text-center mt-6">
-                {msg}
-              </div>
-            ))
-          )}
-        </div>
-      </div>
-  
-      {/* Top Right: Communicate with Local Storage */}
-      <div className="bg-slate-800 rounded-xl p-6 shadow-lg flex flex-col">
-        <h3 className="text-center text-lg font-bold mb-4">Communicate with Local Storage</h3>
-        <div className="flex-1 bg-slate-700 rounded-lg p-2 overflow-y-auto">
-          {localMessages.length === 0 ? (
-            <div className="text-slate-400 text-4xl font-bold text-center mt-6">No challenge messages yet</div>
-          ) : (
-            localMessages.map((msg, idx) => (
-              <div key={idx} className="text-3xl font-bold text-center mt-6">
-                {msg}
-              </div>
-            ))
-          )}
-        </div>
-        <button
-          onClick={handleSendChallengeReady}
-          className="mt-4 py-2 px-4 rounded-md font-medium bg-emerald-500 hover:bg-emerald-600 text-white"
-        >
-          Send Ready for Challenge
-        </button>
-      </div>
-  
-      {/* Bottom Left: Bob Controls */}
-      {/* Bottom Left: Bob Controls */}
-<div className="bg-slate-800 rounded-xl p-8 shadow-lg flex flex-col justify-center items-center gap-6">
-  <h3 className="text-2xl font-bold mb-4">Bob Controls</h3>
+<div className="min-h-screen w-full bg-slate-900 grid grid-cols-2 grid-rows-2 gap-2 relative p-2">
+
+{/* Top Left: Cloud */}
+<div className="bg-slate-800 rounded-xl p-6 shadow-xl flex flex-col w-full h-full">
+  <h3 className="text-3xl font-bold text-center mb-4">Communicate with Cloud</h3>
+  <div className="flex-1 bg-slate-700 rounded-lg p-6 overflow-y-auto">
+    {cloudMessages.length === 0 ? (
+      <div className="text-slate-400 text-2xl font-semibold text-center">No messages yet</div>
+    ) : (
+      cloudMessages.map((msg, idx) => (
+        <div key={idx} className="text-xl font-bold text-center mt-2">{msg}</div>
+      ))
+    )}
+  </div>
+</div>
+
+{/* Top Right: Local */}
+<div className="bg-slate-800 rounded-xl p-6 shadow-xl flex flex-col w-full h-full">
+  <h3 className="text-3xl font-bold text-center mb-4">Communicate with Local Storage</h3>
+  <div className="flex-1 bg-slate-700 rounded-lg p-6 overflow-y-auto">
+    {localMessages.length === 0 ? (
+      <div className="text-slate-400 text-2xl font-semibold text-center">No challenge messages yet</div>
+    ) : (
+      localMessages.map((msg, idx) => (
+        <div key={idx} className="text-xl font-bold text-center mt-2">{msg}</div>
+      ))
+    )}
+  </div>
+  <button
+    onClick={handleSendChallengeReady}
+    className="mt-6 py-4 px-6 rounded-md font-semibold bg-emerald-500 hover:bg-emerald-600 text-white text-xl"
+  >
+    Send Ready for Challenge
+  </button>
+</div>
+
+{/* Bottom Left: Bob */}
+<div className="bg-slate-800 rounded-xl p-6 shadow-xl flex flex-col justify-center items-center gap-6 w-full h-full">
+  <h3 className="text-3xl font-bold">Bob Controls</h3>
   <button
     onClick={startBob}
-    className="py-3 px-6 rounded-md font-semibold bg-emerald-500 hover:bg-emerald-600 text-white text-lg"
+    className="w-4/5 py-4 px-6 rounded-md font-semibold bg-emerald-500 hover:bg-emerald-600 text-white text-xl"
   >
     Start Bob
   </button>
   <button
     onClick={stopBob}
-    className="py-3 px-6 rounded-md font-semibold bg-emerald-500 hover:bg-emerald-600 text-white text-lg"
+    className="w-4/5 py-4 px-6 rounded-md font-semibold bg-emerald-500 hover:bg-emerald-600 text-white text-xl"
   >
     Stop Bob
   </button>
 </div>
 
-{/* Bottom Right: Alice Controls */}
-<div className="bg-slate-800 rounded-xl p-8 shadow-lg flex flex-col justify-center items-center gap-6">
-  <h3 className="text-2xl font-bold mb-4">Alice Controls</h3>
+{/* Bottom Right: Alice */}
+<div className="bg-slate-800 rounded-xl p-6 shadow-xl flex flex-col justify-center items-center gap-6 w-full h-full">
+  <h3 className="text-3xl font-bold">Alice Controls</h3>
   <button
     onClick={startAlice}
-    className="py-3 px-6 rounded-md font-semibold bg-emerald-500 hover:bg-emerald-600 text-white text-lg"
+    className="w-4/5 py-4 px-6 rounded-md font-semibold bg-emerald-500 hover:bg-emerald-600 text-white text-xl"
   >
     Start Alice
   </button>
   <button
     onClick={stopAlice}
-    className="py-3 px-6 rounded-md font-semibold bg-emerald-500 hover:bg-emerald-600 text-white text-lg"
+    className="w-4/5 py-4 px-6 rounded-md font-semibold bg-emerald-500 hover:bg-emerald-600 text-white text-xl"
   >
     Stop Alice
   </button>
 </div>
+</div>
 
-    </div>
-  );
+
   
-  
+);
 }
-
 export default LocalHome;
