@@ -12,7 +12,7 @@ HexaShield is a secure and user-friendly platform for verifying the integrity of
 - **Cloud Component:** Stores files, generates cryptographic hashes (metadata), and coordinates integrity checks.
 - **Fog Storage Auditing:** Local devices act as both storage nodes and auditors in a peer-to-peer setup.
 - **Decentralized Verification:** File integrity is verified without needing the full file or a third-party.
-- **Efficient & Lightweight:** Uses MAC-like cryptography and 4% random sampling (based on Ateniese’s model) for 99% detection of 1% corruption.
+- **Efficient & Lightweight:** Uses MAC-like cryptography and 4% random sampling (based on Ateniese’s model) for 99% detection of even 1% corruption.
 - **Real-time Integrity Monitoring:** Ideal for applications needing timely and secure data validation.
 - **User-Friendly GUI:** Simplified interface for file upload, audit triggers, and results view.
 
@@ -90,13 +90,13 @@ git clone https://github.com/yourusername/HexaShield.git
 ### 📁 Step 4: Alice & Bob Configuration
 
 #### Alice (Auditor):
-- `runScript.js`: Update line 132 & 194 with local file path
+- `runScript.js`: Update line 132 & 194 with your local file path
 - `alice.sh`:
     - Set path to `dataaudit` folder
     - Set **Bob’s IP address**
 
 #### Bob (Auditee):
-- `runScript.js`: Update line 132 & 194 with local file path
+- `runScript.js`: Update line 132 & 194 with your local file path
 - `bob.sh`:
     - Set path to `dataaudit` folder
     - Set **Alice’s IP address**
