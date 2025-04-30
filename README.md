@@ -129,8 +129,8 @@ npm run dev
 
 2. **Cloud PC**
     - Upload a file and generate metadata
-    - Send file to **Bob**
-    - Distribute verification data to **Alice** and **Bob**
+    - Send file to **Bob PC**
+    - Distribute verification data to **Alice PC** and **Bob PC**
     - Click **Send Verification**
 
 3. **Bob PC**
